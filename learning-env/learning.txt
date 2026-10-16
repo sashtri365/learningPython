@@ -1,0 +1,8 @@
+------- NEPALI ROMAN LANGUAGE for personal understanding -----
+
+new globle python maa already virtual environment install hunxa. purano version maa matra venv download garna parxa.
+
+yeti virtual environment install vako xoina vane install garna [ pip install virtualenv ] lekhera install garne.
+windows maa venv ACTIVATE garna [ .\env_name\Scripts\activate ] lekhera activate garna sakinxa.
+using [  pip install <modules name> ] you can install modules. 
+[  pip list > requirement.txt ] use garera env maa chaine modules install garna sakinxa.
