@@ -1,0 +1,17 @@
+All these note are for personal understanding in nepali language.
+
+Network :: ip, port, clint-server 
+  1. IP Adress -> sabai computer ko wa server ko ip hunxa. ip 2 types ko hunxa private ra public. public adress sabai
+   ko lagi hunxa. YO Ghar ko thegana jasto ho. (198.168.1.1)
+
+   2. port -> yo gharko rooms jasto ho. yesma kye numbers haru reverse hunxan. jastai 22 port number SSH (secure shell)
+   ko lagi use hunxa. port 80 public ko lagi herna lai hunxa. harek port alag alag kaam ko lagi use hunxan.
+
+  3. server -> server saman haruko bhander jastai ho. kun manxe kun port bata aayo tye anusar serve garne kaam server
+  le garxa. jastai koi port 80 bata aayo vane khali herna dine. port 22 bata aaye file edit garna paune etc. server
+  dookan ho jasle costumer ko demand anusar saman serv garxa.
+
+  4. client -> server maa costumer ko rup maa request garne manxe. request geniune vaye server le serve garxa.
+
+  5.localHost/127.0.0.1 -> own computer. test garda local computer maa garinxa.
+
