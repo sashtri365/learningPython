@@ -1,8 +1,16 @@
-import socket
-import threading
+import socket # socket programming use garna lai socket liabrary import gareko.
 
-PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
-print(SERVER)
+host = socket.gethostname() #host name tha pauna lai. yaah my computer is host name
+print(host)
+#host_name = socket.gethostbyname("google.com")
+#print(host_name)
 
+port_80 = socket.getservbyport(80,"tcp") #port number tha xa tara name tha xoina vane yo function use garera tha paune
+port_443 = socket.getservbyport(443,"tcp") #same 
+print(f"yo port 80 ko name: {port_80} ho")
+print(port_443)
 
+#creating socket endpoint
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    print(s)
+    print(s.fileno())

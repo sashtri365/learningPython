@@ -15,3 +15,18 @@ Network :: ip, port, clint-server
 
   5.localHost/127.0.0.1 -> own computer. test garda local computer maa garinxa.
 
+function ko use
+  socket.gethostname()  -> yo function le code kun server maa chaldae xa tha pauna sakinxa.
+  socket.gethostbyname("host name") -> google.com, facebook.com ect host  ya domain name bata ipv4 adress tah pauna milxa.
+  socket.getservbyport(port number,"procotol name") --> yaa port number ra protocal(80,"tcp") use garera name tha pauna
+         sakinxa.
+
+what is socket .? 
+   -> IP + PORT milera baneko data exchange garne endpoint nai socket ho.
+   socket.socket(family,type) function use garera socket endpoint banayenxa.
+    FAMILY -> yesle network layer protocol (IPv4/6) taya garxa. 4/6 kun use garne yesaiko kaam ho.
+      socket.AF_INET / socket.AF_INET6 (IPv4/6) family arguments ho.
+    TYPE ->> yo argument ko matlab trasnport layer protocol ho. yesle data kun protocal(TCP,UDP) vayera transport 
+      garne vanne kura taya garxa.
+      socket.SOCK_STRAM #TCP ra socket.SOCK_DGRAM #UCP etc.. protocol taya garxa.
+      kun port maa kasto data phathaune pani transport layer protocol le handel garxa.
