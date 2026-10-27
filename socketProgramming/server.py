@@ -11,6 +11,10 @@ print(f"yo port 80 ko name: {port_80} ho")
 print(port_443)
 
 #creating socket endpoint
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:  #tcp protocol maa baneko
     print(s)
-    print(s.fileno())
+    print(s.fileno())   
+
+with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+    print(s.type)
+    print(s, s.fileno, s.type)
