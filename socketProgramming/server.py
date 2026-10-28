@@ -23,7 +23,6 @@ while True:
 
     response = "i got massage."
     conn.send(response.encode('utf-8')) # create response variable and sent
-    conn.send("hi, friend".encode('utf-8')) #without creating just type inside string and sent. 
 
 conn.close()
 server_socket.close()
