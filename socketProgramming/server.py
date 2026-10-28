@@ -1,20 +1,29 @@
-import socket # socket programming use garna lai socket liabrary import gareko.
+import socket
 
-host = socket.gethostname() #host name tha pauna lai. yaah my computer is host name
-print(host)
-#host_name = socket.gethostbyname("google.com")
-#print(host_name)
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-port_80 = socket.getservbyport(80,"tcp") #port number tha xa tara name tha xoina vane yo function use garera tha paune
-port_443 = socket.getservbyport(443,"tcp") #same 
-print(f"yo port 80 ko name: {port_80} ho")
-print(port_443)
+HOST = '127.0.0.1'
+PORT = 8000
+server_socket.bind(HOST,PORT)
 
-#creating socket endpoint
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:  #tcp protocol maa baneko
-    print(s)
-    print(s.fileno())   
+server_socket.listen(5)
+print(f"server is running on {HOST}:{PORT} and waiting for send/receive data")
 
-with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-    print(s.type)
-    print(s, s.fileno, s.type)
+conn,address = server_socket.accept() #conn -> create new socket for new user. address -> keep ip+port details
+print(f"client is connected : {address}") # address ==>> client address
+
+while True:
+    data = conn.recv(1024).decode('utf-8') #conn = new socket, .recv(1024) = recv() data paune function ra 1024 bytes.
+    #server le one time maa 1024 (1 kb) data padhna sakxa vanne artha 1024 ko ho. data binary/bytes maa internet maa
+    # kudxa so to convert into normal data type we use .decode('utf-8')
+    if not data or data.lower() == 'exit':
+        print("connection lost")
+        break
+    print(f"client data: {data}.")
+
+    response = "i got massage."
+    conn.send(response.encode('utf-8')) # create response variable and sent
+    conn.send("hi, friend".encode('utf-8')) #without creating just type inside string and sent. 
+
+conn.close()
+server_socket.close()
