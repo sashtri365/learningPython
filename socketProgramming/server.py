@@ -4,7 +4,7 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 HOST = '127.0.0.1'
 PORT = 8000
-server_socket.bind(HOST,PORT)
+server_socket.bind((HOST,PORT))
 
 server_socket.listen(5)
 print(f"server is running on {HOST}:{PORT} and waiting for send/receive data")
