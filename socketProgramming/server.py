@@ -25,4 +25,4 @@ while True:
     conn.send(response.encode('utf-8')) # create response variable and sent
 
 conn.close()
-server_socket.close()
+server_socket.close() 
